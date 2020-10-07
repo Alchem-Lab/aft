@@ -16,7 +16,7 @@ import (
 	"github.com/montanaflynn/stats"
 	"google.golang.org/grpc"
 
-	pb "github.com/vsreekanti/aft/proto/aft"
+	pb "github.com/Alchem-Lab/aft/proto/aft"
 )
 
 var numRequests = flag.Int("numRequests", 1000, "The total number of requests in the benchmark")

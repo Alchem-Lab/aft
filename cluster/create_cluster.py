@@ -77,13 +77,13 @@ def create_cluster(replica_count, gc_count, lb_count, bench_count, cfile,
     management_pname = management_spec['metadata']['name']
     management_cname = management_spec['spec']['containers'][0]['name']
     util.copy_file_to_pod(client, 'aft-config.yml', management_pname,
-                          '/go/src/github.com/vsreekanti/aft/config',
+                          '/go/src/github.com/Alchem-Lab/aft/config',
                           management_cname)
     util.copy_file_to_pod(client, 'replicas.txt', management_pname,
-                          '/go/src/github.com/vsreekanti/aft',
+                          '/go/src/github.com/Alchem-Lab/aft',
                           management_cname)
     util.copy_file_to_pod(client, 'gcs.txt', management_pname,
-                          '/go/src/github.com/vsreekanti/aft',
+                          '/go/src/github.com/Alchem-Lab/aft',
                           management_cname)
     util.copy_file_to_pod(client, kubecfg, management_pname, '/root/.kube/',
                           management_cname)
@@ -96,7 +96,7 @@ def create_cluster(replica_count, gc_count, lb_count, bench_count, cfile,
     aft_pod_list = list(map(lambda pod: pod.metadata.name, aft_pod_list))
     for pname in aft_pod_list:
         util.copy_file_to_pod(client, 'replicas.txt', pname,
-                              '/go/src/github.com/vsreekanti/aft',
+                              '/go/src/github.com/Alchem-Lab/aft',
                               'aft-container')
 
     gc_pod_list = client.list_namespaced_pod(namespace=util.NAMESPACE,
@@ -104,7 +104,7 @@ def create_cluster(replica_count, gc_count, lb_count, bench_count, cfile,
     gc_pod_list = list(map(lambda pod: pod.metadata.name, gc_pod_list))
     for pname in gc_pod_list:
         util.copy_file_to_pod(client, 'replicas.txt', pname,
-                              '/go/src/github.com/vsreekanti/aft',
+                              '/go/src/github.com/Alchem-Lab/aft',
                               'gc-container')
     os.system('rm replicas.txt')
 

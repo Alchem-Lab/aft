@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	pb "github.com/vsreekanti/aft/proto/aft"
+	pb "github.com/Alchem-Lab/aft/proto/aft"
 )
 
 type ReadAtomicConsistencyManager struct{}

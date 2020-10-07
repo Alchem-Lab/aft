@@ -18,7 +18,7 @@ MAINTAINER Vikram Sreekanti <vsreekanti@gmail.com> version: 0.1
 
 USER root
 ENV GOPATH /go
-ENV AFT_HOME $GOPATH/src/github.com/vsreekanti/aft
+ENV AFT_HOME $GOPATH/src/github.com/Alchem-Lab/aft
 
 # Setup the go dir.
 RUN mkdir $GOPATH
@@ -47,9 +47,9 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/p
 RUN unzip protoc-3.10.0-linux-x86_64.zip -d /usr/local
 
 # Clone the aft code.
-RUN mkdir -p $GOPATH/src/github.com/vsreekanti
+RUN mkdir -p $GOPATH/src/github.com/Alchem-Lab
 WORKDIR $AFT_HOME/..
-RUN git clone https://github.com/vsreekanti/aft
+RUN git clone https://github.com/Alchem-Lab/aft
 WORKDIR $AFT_HOME
 
 # Install required Go dependencies.

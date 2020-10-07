@@ -12,8 +12,8 @@ import (
 	uuid "github.com/nu7hatch/gouuid"
 	zmq "github.com/pebbe/zmq4"
 
-	pb "github.com/vsreekanti/aft/proto/aft"
-	annapb "github.com/vsreekanti/aft/proto/anna"
+	pb "github.com/Alchem-Lab/aft/proto/aft"
+	annapb "github.com/Alchem-Lab/aft/proto/anna"
 )
 
 type keyUpdate struct {

@@ -11,9 +11,9 @@ import (
 	"github.com/golang/protobuf/proto"
 	zmq "github.com/pebbe/zmq4"
 
-	"github.com/vsreekanti/aft/config"
-	"github.com/vsreekanti/aft/lib/consistency"
-	pb "github.com/vsreekanti/aft/proto/aft"
+	"github.com/Alchem-Lab/aft/config"
+	"github.com/Alchem-Lab/aft/lib/consistency"
+	pb "github.com/Alchem-Lab/aft/proto/aft"
 )
 
 const (
