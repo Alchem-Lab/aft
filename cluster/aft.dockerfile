@@ -63,9 +63,10 @@ WORKDIR $AFT_HOME/proto/aft
 RUN protoc -I . aft.proto --go_out=plugins=grpc:.
 WORKDIR $AFT_HOME
 # RUN go get -u github.com/googleapis/gnostic 
-RUN go get -d ./...
+# RUN go get -d ./...
+RUN go get -u -d github.com/googleapis/gnostic
 RUN cd $GOPATH/src/github.com/googleapis/gnostic && git checkout v0.4.0
-# RUN go get -u -d k8s.io/klog
+RUN go get -u -d k8s.io/klog
 RUN cd $GOPATH/src/k8s.io/klog && git checkout v0.4.0
 
 # Install Python dependencies.

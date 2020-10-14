@@ -21,7 +21,7 @@ import boto3
 from add_nodes import add_nodes
 import util
 
-ec2_client = boto3.client('ec2', os.getenv('AWS_REGION', 'us-east-1'))
+ec2_client = boto3.client('ec2', os.getenv('AWS_REGION', 'us-west-1'))
 
 
 def create_cluster(replica_count, gc_count, lb_count, bench_count, cfile,

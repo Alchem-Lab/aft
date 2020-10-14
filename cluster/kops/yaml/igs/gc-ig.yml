@@ -20,7 +20,8 @@ metadata:
   name: gc-instances
 spec:
   image: kope.io/k8s-1.11-debian-stretch-amd64-hvm-ebs-2018-08-17
-  machineType: c5.large
+  # machineType: c5.large
+  machineType: t2.micro
   maxSize: NUM_DUMMY
   minSize: NUM_DUMMY
   rootVolumeSize: 32

@@ -20,7 +20,9 @@ metadata:
   name: benchmark-instances
 spec:
   image: kope.io/k8s-1.11-debian-stretch-amd64-hvm-ebs-2018-08-17
-  machineType: m4.xlarge
+  # machineType: m4.xlarge
+  machineType: t2.micro
+  # machineType: m4.large
   maxSize: NUM_DUMMY
   minSize: NUM_DUMMY
   role: Node
